@@ -1,35 +1,40 @@
 <header>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <div class="container-fluid">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-mdb-toggle="collapse"
-        data-mdb-target="#navbarExample01"
-        aria-controls="navbarExample01"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarExample01">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link"  href="halaman_admin.php?page=kategori">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link"  href="halaman_admin.php?page=level">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link"  href="halaman_admin.php?page=tipe">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link"  href="halaman_admin.php?page=alur">About</a>
-          </li>
-        </ul>
-      </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar scroll</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Tabel Master
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li><a class="dropdown-item" href="halaman_admin.php?page=kategori">kategori</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="halaman_admin.php?page=level">Level</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="halaman_admin.php?page=tipe">Tipe</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="halaman_admin.php?page=alur">Alur</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Link</a>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
   <!-- Navbar -->
 </header>

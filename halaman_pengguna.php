@@ -2,7 +2,7 @@
 <html>
 <body>
 	<?php
-	include 'config/koneksi.php';
+	include 'panggil.php';
 	session_start();
 
 	if($_SESSION['level']==""){
