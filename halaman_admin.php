@@ -11,12 +11,12 @@
 	<?php 
 
 	include 'aset/header.php';
-	include 'panggil.php';
+	include 'config/koneksi.php';
 
 	session_start();
 	if($_SESSION['level']==""){
 		header("location:login.php?pesan=gagal");
-	} 
+	}
 	?>
 
 	<!--Content-->
@@ -36,6 +36,7 @@
 
 	
     <?php
+	
 	if(isset($_GET['page'])){
 		$page = $_GET['page'];
 	}
