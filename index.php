@@ -52,18 +52,16 @@
 
     if(!isset($_GET['page'])){
         include 'admin/home.php';
-    }elseif(!empty($_GET['page'] == 'admin')){
-        include 'admin/user/default.php';
     }elseif(!empty($_GET['page'] == 'alur')){
-        include 'admin/alur/default.php';
+        include 'admin/tabel_master/alur/default.php';
     }elseif(!empty($_GET['page'] == 'kategori')){
-        include 'admin/crud/default.php';
+        include 'admin/tabel_master/crud/default.php';
     }elseif(!empty($_GET['page'] == 'level')){
-        include 'admin/level/default.php';
+        include 'admin/tabel_master/level/default.php';
     }elseif(!empty($_GET['page'] == 'tipe')){
-        include 'admin/tipe/default.php';
+        include 'admin/tabel_master/tipe/default.php';
     }elseif(!empty($_GET['page'] == 'user')){
-        include 'admin/user/default.php';
+        include 'admin/tabel_master/user/default.php';
     }
 
     }
