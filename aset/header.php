@@ -20,13 +20,13 @@
             Tabel Master
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-            <li><a class="dropdown-item" href="halaman_admin.php?page=kategori">kategori</a></li>
+            <li><a class="dropdown-item" href="index.php?page=kategori">kategori</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="halaman_admin.php?page=level">Level</a></li>
+            <li><a class="dropdown-item" href="index.php?page=level">Level</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="halaman_admin.php?page=tipe">Tipe</a></li>
+            <li><a class="dropdown-item" href="index.php?page=tipe">Tipe</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="halaman_admin.php?page=alur">Alur</a></li>
+            <li><a class="dropdown-item" href="index.php?page=alur">Alur</a></li>
           </ul>
         </li>
         <li class="nav-item">

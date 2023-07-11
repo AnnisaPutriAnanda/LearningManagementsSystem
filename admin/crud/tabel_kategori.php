@@ -4,10 +4,10 @@
         <div class="col-md-12">
           <div class="card">
             <div class="card-header">
-              Tabel Alur
+              Tabel Kategori
             </div>
             <div class="card-body">
-            <a href='halaman_admin.php?page=buat_alur&id_alur' class="btn btn-md btn-success" style="margin-bottom: 10px">TAMBAH DATA</a>
+            <a href='index.php?page=kategori&acts=buat' class="btn btn-md btn-success" style="margin-bottom: 10px">TAMBAH DATA</a>
               <table class="table table-bordered" id="myTable">
                 <thead>
                   <tr>
@@ -18,7 +18,7 @@
                 </thead>
                 <tbody>
                   <?php 
-                     $query = mysqli_query($koneksi, "SELECT * FROM `alur_kelas`");
+                     $query = mysqli_query($koneksi, "SELECT * FROM `kategori_kelas`");
                      while($row = mysqli_fetch_array($query)){
                   ?>
 
@@ -26,8 +26,8 @@
                   <td><?php echo $row['id'] ?></td>
                   <td><?php echo $row['nama'] ?></td>
                       <td class="text-center">
-                        <a href='halaman_admin.php?page=edit_alur&id_alur=<?php echo $row['id'] ?>' class="btn btn-sm btn-primary">EDIT</a>
-                        <a href='halaman_admin.php?page=hapus_alur&id_alur=<?php echo $row['id'] ?>' class="btn btn-sm btn-danger">HAPUS</a>
+                        <a href='index.php?page=kategori&acts=edit&id_kategori=<?php echo $row['id'] ?>' class="btn btn-sm btn-primary">EDIT</a>
+                        <a href='index.php?page=kategori&acts=hapus&id_kategori=<?php echo $row['id'] ?>' class="btn btn-sm btn-danger">HAPUS</a>
                       </td>
                   </tr>
 

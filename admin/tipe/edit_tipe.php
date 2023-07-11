@@ -46,7 +46,7 @@ if(!empty($nama_edit)){
 
     $query2 = "UPDATE `tipe_kelas` SET `nama` = '$nama_edit' WHERE `tipe_kelas`.`id` = '$id'";
     $update = mysqli_query($koneksi, $query2);
-    header('location:halaman_admin.php?page=tipe');
+    header('location:index.php?page=tipe');
 }
 }
 ?>

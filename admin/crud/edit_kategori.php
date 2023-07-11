@@ -38,7 +38,7 @@
                 
                     $query2 = "UPDATE `kategori_kelas` SET `nama` = '$nama_edit' WHERE `kategori_kelas`.`id` = '$id'";
                     $update = mysqli_query($koneksi, $query2);
-                    header('location:halaman_admin.php?page=kategori');
+                    header('location:index.php?page=kategori');
                 }
                 };
               ?>

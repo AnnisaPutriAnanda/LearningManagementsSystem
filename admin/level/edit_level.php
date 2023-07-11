@@ -46,7 +46,7 @@ if(!empty($nama_edit)){
 
     $query2 = "UPDATE `level_kelas` SET `nama` = '$nama_edit' WHERE `level_kelas`.`id` = '$id'";
     $update = mysqli_query($koneksi, $query2);
-    header('location:halaman_admin.php?page=level');
+    header('location:index.php?page=level');
 }
 }
 ?>

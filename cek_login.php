@@ -1,7 +1,7 @@
 <?php 
 session_start();
 
-include 'panggil.php';
+include 'config/koneksi.php';
 
 $username = $_POST['username'];
 $password = $_POST['password'];
@@ -24,13 +24,13 @@ if($cek > 0){
 		$_SESSION['username'] = $username;
 		$_SESSION['level'] = "admin";
 		
-		header("location:halaman_admin.php");
+		header("location:index.php");
 
 	}else if($data['level']=="pengguna"){
 		$_SESSION['username'] = $username;
 		$_SESSION['level'] = "pengguna";
 
-		header("location:halaman_pengguna.php");
+		header("location:index.php");
 
 	}else if($data['level']=="pengurus"){
 		$_SESSION['username'] = $username;
@@ -38,7 +38,8 @@ if($cek > 0){
 		
 		header("location:halaman_pengurus.php");
 
-	}else{
+	}
+	else{
 
 		header("location:login.php?pesan=gagal");
 	}

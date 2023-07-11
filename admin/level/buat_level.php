@@ -8,9 +8,9 @@ $nama_edit = $_POST['nama'];
 
 if(!empty($id_edit) && !empty($nama_edit)){
 
-    $query2 = "INSERT INTO `tipe_kelas` (`id`, `nama`) VALUES ('$id_edit', '$nama_edit')";
+    $query2 = "INSERT INTO `level_kelas` (`id`, `nama`) VALUES ('$id_edit', '$nama_edit')";
     $update = mysqli_query($koneksi, $query2);
-    header('location:halaman_admin.php?page=tipe');
+    header('location:index.php?page=level');
 }
 
 }
@@ -22,7 +22,7 @@ if(!empty($id_edit) && !empty($nama_edit)){
         <div class="col-md-12">
           <div class="card">
             <div class="card-header">
-              Tabel Tipe
+              Tabel Level
             </div>
             <div class="card-body">
 <form action="" method="POST">
