@@ -21,10 +21,10 @@
 
     if(isset($_GET['pesan'])){
 		if($_GET['pesan']=="gagal"){
-			echo "<div class='alert'>Username dan Password tidak sesuai !</div>";
+			echo "<div class='alert'>Username atau Password tidak sesuai !</div>";
 		}
 		elseif($_GET['pesan']=="session"){
-			echo "<div class='alert'>Sesi Tidak Ditemukan !</div>";
+			echo "<div class='alert'>Sesi Belum Dihancurkan !</div>";
 		}
 	}
 	?>

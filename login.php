@@ -7,12 +7,17 @@
  
 
 	<?php 
+        session_start();
+     if(isset($_SESSION['level'])){
+	header("location:index.php?pesan=session");
+    }else{}
 
 	if(isset($_GET['pesan'])){
 		if($_GET['pesan']=="gagal"){
-			echo "<div class='alert'>Username dan Password tidak sesuai !</div>";
+			echo "<div class='alert'>Username atau Password tidak sesuai !</div>";
 		}
-	}
+		}
+	
 	?>
  
 	<div class="kotak_login">
