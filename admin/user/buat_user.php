@@ -4,13 +4,15 @@ if(isset($_POST['submit'])){
 
 $id_edit = $_POST['id'];
 $nama_edit = $_POST['nama'];
+$password_edit = $_POST['password'];
+$level_edit = $_POST['level'];
 
 
-if(!empty($nama_edit)){
+if(!empty($nama_edit) && !empty($password_edit) && !empty($level_edit)){
 
-    $query2 = "INSERT INTO `tipe_kelas` (`id`, `nama`) VALUES (NULL, '$nama_edit')";
+    $query2 = "INSERT INTO `user` (`id_user`, `username`, `password`, `level`) VALUES (NULL, '$nama_edit', '$password_edit', '$level_edit')";
     $update = mysqli_query($koneksi, $query2);
-    header('location:index.php?page=tipe');
+    header('location:index.php?page=user');
 }
 
 }
@@ -37,6 +39,19 @@ if(!empty($nama_edit)){
                 <div class="form-group">
                   <label>NAMA</label>
                   <input type="text" name="nama" id="nama" value="" placeholder="" class="form-control">
+                </div>
+              <br/>
+              <div class="form-group">
+                  <label>PASSWORD</label>
+                  <input type="text" name="password" id="password" value="" placeholder="" class="form-control">
+                </div>
+              <br/>
+              <div class="form-group">
+                  <label>LEVEL</label>
+                  <select class="form-select" aria-label="Default select example" name="level" id="level">
+                  <option value="admin">admin</option>
+                  <option value="pengguna">pengguna</option>
+                  </select>
                 </div>
               <br/>
                 <button type="submit" name="submit" class="btn btn-success">TAMBAH</button>

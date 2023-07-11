@@ -15,8 +15,6 @@
 
 	session_start();
 
-     
-
 	if($_SESSION['level']==""){
 		header("location:login.php?pesan=gagal");
 	} 
@@ -64,10 +62,13 @@
         include 'admin/level/default.php';
     }elseif(!empty($_GET['page'] == 'tipe')){
         include 'admin/tipe/default.php';
+    }elseif(!empty($_GET['page'] == 'user')){
+        include 'admin/user/default.php';
     }
-}    
 
+    }
     if($_SESSION['level'] == 'pengguna'){
+
         include 'admin/home.php';
     }
         ?>

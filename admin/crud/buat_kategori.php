@@ -6,9 +6,9 @@ $id_edit = $_POST['id'];
 $nama_edit = $_POST['nama'];
 
 
-if(!empty($id_edit) && !empty($nama_edit)){
+if(!empty($nama_edit)){
 
-    $query2 = "INSERT INTO `kategori_kelas` (`id`, `nama`) VALUES ('$id_edit', '$nama_edit')";
+    $query2 = "INSERT INTO `kategori_kelas` (`id`, `nama`) VALUES (NULL, '$nama_edit')";
     $update = mysqli_query($koneksi, $query2);
     header('location:index.php?page=kategori');
 }
@@ -28,9 +28,10 @@ if(!empty($id_edit) && !empty($nama_edit)){
 <form action="" method="POST">
                 
                 <div class="form-group">
+                  <div hidden>
                   <label>ID</label>
                   <input type="text" name="id" id="id" value="" placeholder="" class="form-control">
-                </div>
+                </div></div>
 
                 <div class="form-group">
                   <label>NAMA</label>
