@@ -13,6 +13,8 @@ if(!empty($nama_edit) && !empty($password_edit) && !empty($level_edit)){
     $query2 = "INSERT INTO `user` (`id_user`, `username`, `password`, `level`) VALUES (NULL, '$nama_edit', '$password_edit', '$level_edit')";
     $update = mysqli_query($koneksi, $query2);
     header('location:index.php?page=user');
+}else{
+  echo '<script> alert("Field Tidak Boleh Kosong")</script>';
 }
 
 }

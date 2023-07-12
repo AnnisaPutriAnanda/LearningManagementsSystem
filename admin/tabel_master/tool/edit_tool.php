@@ -9,14 +9,12 @@
  if(isset($_POST['edit'])){ 
 
     $target = $row['gambar'];
-    
     $cek = mysqli_num_rows($target);
+    
     if($cek > 0){}else{
         unlink("file/$target");
     }
    
-
-
     $gambar = $_FILES['gambar']['name'];
     $file_tmp = $_FILES['gambar']['tmp_name'];
     move_uploaded_file($file_tmp, 'file/'.$gambar);
@@ -29,7 +27,9 @@
     $update = mysqli_query($koneksi, $query2);
     header('location:index.php?page=tool');
     ob_end_flush();
-}else{ echo 'mohon isi field dengan benar';}
+}else{
+  echo '<script> alert("Field Tidak Boleh Kosong")</script>';
+}
 }
 
 ?>

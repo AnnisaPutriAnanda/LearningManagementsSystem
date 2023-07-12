@@ -13,7 +13,9 @@ if(!empty($nama_edit)){
     $query2 = "INSERT INTO `tools` (`id`, `nama`, `gambar`, `link`) VALUES (NULL, '$nama_edit', '$gambar', '$link')";
     $update = mysqli_query($koneksi, $query2);
     header('location:index.php?page=tool');
-}
+}else{
+    echo '<script> alert("Field Tidak Boleh Kosong")</script>';
+  }
 
 }
 

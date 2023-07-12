@@ -48,6 +48,8 @@ if(!empty($nama_edit)){
     $update = mysqli_query($koneksi, $query2);
     header('location:index.php?page=pekerjaan');
     ob_end_flush();
+}else{
+  echo '<script> alert("Field Tidak Boleh Kosong")</script>';
 }
 }
 ?>

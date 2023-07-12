@@ -11,6 +11,8 @@ if(!empty($nama_edit)){
     $query2 = "INSERT INTO `level_kelas` (`id`, `nama`) VALUES (NULL, '$nama_edit')";
     $update = mysqli_query($koneksi, $query2);
     header('location:index.php?page=level');
+}else{
+  echo '<script> alert("Field Tidak Boleh Kosong")</script>';
 }
 
 }

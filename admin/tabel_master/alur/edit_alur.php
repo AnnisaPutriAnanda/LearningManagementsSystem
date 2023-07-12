@@ -1,5 +1,5 @@
 <?php
-
+ob_start();
   $id = $_GET['id_alur']; 
   
   $query = "SELECT * FROM alur_kelas WHERE id= '$id'"; 
@@ -47,6 +47,9 @@ if(!empty($nama_edit)){
     $query2 = "UPDATE `alur_kelas` SET `nama` = '$nama_edit' WHERE `alur_kelas`.`id` = '$id'";
     $update = mysqli_query($koneksi, $query2);
     header('location:index.php?page=alur');
+    ob_end_flush();
+}else{
+  echo '<script> alert("Field Tidak Boleh Kosong")</script>';
 }
 }
 ?>
