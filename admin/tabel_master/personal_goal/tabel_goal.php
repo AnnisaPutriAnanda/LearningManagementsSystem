@@ -4,37 +4,32 @@
         <div class="col-md-12">
           <div class="card">
             <div class="card-header">
-              Tabel User
+              Tabel Goals
             </div>
             <div class="card-body">
-            <a href='index.php?page=user&acts=buat' class="btn btn-md btn-success" style="margin-bottom: 10px">TAMBAH DATA</a>
+            <a href='index.php?page=personal_goal&acts=buat' class="btn btn-md btn-success" style="margin-bottom: 10px">TAMBAH DATA</a>
               <table class="table table-bordered" id="myTable">
                 <thead>
                   <tr>
-                  <th scope="col">NO</th>
-                  
+                    <th scope="col">NO</th>
                     <th scope="col">NAMA</th>
-                    <th scope="col">PASS</th>
-                    <th scope="col">LEVEL</th>
                     <th scope="col">AKSI</th>
                   </tr>
                 </thead>
                 <tbody>
                   <?php 
                      $no = 1;
-                     $query = mysqli_query($koneksi, "SELECT * FROM `user`");
+                     $query = mysqli_query($koneksi, "SELECT * FROM `personal_goal`");
                      while($row = mysqli_fetch_array($query)){
                   ?>
 
                   <tr>
-                  <td><?php echo $no++ ?></td>
+                    <td><?php echo $no++ ?></td>
                   
-                  <td><?php echo $row['username'] ?></td>
-                  <td><?php echo $row['password'] ?></td>
-                  <td><?php echo $row['level'] ?></td>
+                  <td><?php echo $row['nama'] ?></td>
                       <td class="text-center">
-                        <a href='index.php?page=user&acts=edit&id_user=<?php echo $row['id_user'] ?>' class="btn btn-sm btn-primary">EDIT</a>
-                        <a href='index.php?page=user&acts=hapus&id_user=<?php echo $row['id_user'] ?>' class="btn btn-sm btn-danger">HAPUS</a>
+                        <a href='index.php?page=personal_goal&acts=edit&id_goal=<?php echo $row['id'] ?>' class="btn btn-sm btn-primary">EDIT</a>
+                        <a href='index.php?page=personal_goal&acts=hapus&id_goal=<?php echo $row['id'] ?>' class="btn btn-sm btn-danger">HAPUS</a>
                       </td>
                   </tr>
 

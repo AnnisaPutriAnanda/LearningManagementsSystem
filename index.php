@@ -10,7 +10,6 @@
 
 	<?php 
 
-	include 'aset/header.php';
 	include 'config/koneksi.php';
 
 	session_start();
@@ -28,27 +27,30 @@
 		}
 	}
 	?>
-
-	<!--Content-->
-	<div class="container-fluid">
-        <div class="page-container">
-    <div class="content-wrap">
-            <div class="col-12">
-
-	<div class="container-lg" style="margin-top: 20px">
-        <div class="col-md-12">
-          <div class="card">
-            <div class="card-header">
-			<h1>Halaman <?php echo $_SESSION['level']; ?></h1></div>
-			<div class="card-body">
-	<p>Halo <b><?php echo $_SESSION['username']; ?></b> Anda telah login sebagai <b><?php echo $_SESSION['level']; ?></b>.</p>
-	<a href="logout.php">LOGOUT</a></div></div></div></div>
-
 	
     <?php
 
-
     if($_SESSION['level'] == 'admin'){
+
+        include 'aset/header.php';
+        ?>
+        
+    <!--Content-->
+	<div class="container-fluid">
+    <div class="page-container">
+    <div class="content-wrap">
+    <div class="col-12">
+
+	<div class="container-lg" style="margin-top: 20px">
+    <div class="col-md-12">
+    <div class="card">
+    <div class="card-header">
+	<h1>Halaman <?php echo $_SESSION['level']; ?></h1></div>
+	<div class="card-body">
+	<p>Halo <b><?php echo $_SESSION['username']; ?></b> Anda telah login sebagai <b><?php echo $_SESSION['level']; ?></b>.</p>
+	<a href="logout.php">LOGOUT</a></div></div></div></div>
+
+        <?php
 
     if(!isset($_GET['page'])){
         include 'admin/home.php';
@@ -62,14 +64,20 @@
         include 'admin/tabel_master/tipe/default.php';
     }elseif(!empty($_GET['page'] == 'user')){
         include 'admin/tabel_master/user/default.php';
+    }elseif(!empty($_GET['page'] == 'pekerjaan')){
+        include 'admin/tabel_master/pekerjaan/default.php';
+    }elseif(!empty($_GET['page'] == 'personal_goal')){
+        include 'admin/tabel_master/personal_goal/default.php';
+    }elseif(!empty($_GET['page'] == 'tool')){
+        include 'admin/tabel_master/tool/default.php';
     }
 
     }
     if($_SESSION['level'] == 'pengguna'){
-
-        include 'admin/home.php';
+        include 'aset/header2.php';
     }
         ?>
+        
 		    <br/>
 
             </div> 

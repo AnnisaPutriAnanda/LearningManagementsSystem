@@ -11,19 +11,21 @@
               <table class="table table-bordered" id="myTable">
                 <thead>
                   <tr>
-                    <th scope="col">ID</th>
+                    <th scope="col">NO</th>
                     <th scope="col">NAMA</th>
                     <th scope="col">AKSI</th>
                   </tr>
                 </thead>
                 <tbody>
                   <?php 
+                     $no = 1;
                      $query = mysqli_query($koneksi, "SELECT * FROM `tipe_kelas`");
                      while($row = mysqli_fetch_array($query)){
                   ?>
 
                   <tr>
-                  <td><?php echo $row['id'] ?></td>
+                    <td><?php echo $no++ ?></td>
+                  
                   <td><?php echo $row['nama'] ?></td>
                       <td class="text-center">
                         <a href='index.php?page=tipe&acts=edit&id_tipe=<?php echo $row['id'] ?>' class="btn btn-sm btn-primary">EDIT</a>

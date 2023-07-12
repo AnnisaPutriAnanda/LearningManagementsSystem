@@ -15,6 +15,8 @@
 	if(isset($_GET['pesan'])){
 		if($_GET['pesan']=="gagal"){
 			echo "<div class='alert'>Username atau Password tidak sesuai !</div>";
+		}elseif($_GET['pesan']=="sign_in"){
+			echo "<div class='alert'>Login menurut data yang diregis tadi</div>";
 		}
 		}
 	
